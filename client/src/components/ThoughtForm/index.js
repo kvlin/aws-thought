@@ -9,6 +9,7 @@ const ThoughtForm = () => {
 
   // update state based on form input changes
   const handleChange = (event) => {
+
     if (event.target.value.length <= 280) {
       setFormState({ ...formState, [event.target.name]: event.target.value });
       setCharacterCount(event.target.value.length);
@@ -22,8 +23,23 @@ const ThoughtForm = () => {
     // clear form value
     setFormState({ username: "", thought: "" });
     setCharacterCount(0);
+    const postData = async () => {
+      const res = await fetch('/api/users', {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formState)
+      })
+      const data = await res.json();
+      console.log(data);
+    }
+    postData();
   };
 
+
+  
   return (
     <div>
       <p className={`m-0 ${characterCount === 280 ? "text-error" : ""}`}>
