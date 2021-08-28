@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3001;
 const userRoutes = require('./routes/user-routes');
-
+const imageRoutes = require('./routes/image-routes');
 // express middleware, used to be bodyparser
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -14,7 +14,8 @@ if (process.env.NODE_ENV === 'production') {
 
 // app.use(require('./routes'));
 app.use('/api/', userRoutes);
-
+// route for images
+app.use('/api/', imageRoutes);
 // Start the API server
 app.listen(PORT, () =>
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`)

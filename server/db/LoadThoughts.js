@@ -5,8 +5,7 @@ const fs = require('fs');
 
 // create interface with DynamoDB
 AWS.config.update({
-    region: "us-east-2",
-    endpoint: "http://localhost:8000"
+    region: "us-east-2"
   });
 
 // Create service interface object
@@ -15,7 +14,7 @@ const dynamodb = new AWS.DynamoDB.DocumentClient({apiVersion: '2012-08-10'});
 console.log("Importing thoughts into DynamoDB. Please wait.");
 
 // Assign the seed array of objects to allUsers constant
-const allUsers = JSON.parse(fs.readFileSync('../server/seed/users.json', 'utf8'));
+const allUsers = JSON.parse(fs.readFileSync('server/seed/users.json', 'utf8'));
 
 // Loop over the allUsers array and create the params object with the array elements
 allUsers.forEach(user => {
