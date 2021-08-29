@@ -39,7 +39,8 @@ router.get('/users/:username', (req, res) => {
         ExpressionAttributeNames: { 
             "#un": "username",
             "#ca": "createdAt",
-            "#th": "thought"
+            "#th": "thought", 
+            "#img": "image",
         },
         // values use aliases with : prefix 
         ExpressionAttributeValues: {
@@ -48,7 +49,7 @@ router.get('/users/:username', (req, res) => {
         // specifies the search criteria
         KeyConditionExpression: "#un = :user", 
         // determines which attributes (or columns) will be returned
-        ProjectionExpression: "#th, #ca",
+        ProjectionExpression: "#un, #th, #ca, #img",
         // specifies the order of the sort key - default to true (ascending)
         // we want decending here for most recent thoughts on top
         ScanIndexForward: false
@@ -76,7 +77,8 @@ router.post('/users', (req, res) => {
       Item: {
         "username": req.body.username,
         "createdAt": Date.now(),
-        "thought": req.body.thought
+        "thought": req.body.thought,
+        "image": req.body.image // image attribute
       }
     };
     dynamodb.put(params, (err, data) => {

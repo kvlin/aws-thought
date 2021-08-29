@@ -42,6 +42,7 @@ const ThoughtForm = () => {
 
   const handleImageUpload = event => {
     event.preventDefault();
+    // new HTTP form for image upload
     const data = new FormData();
     data.append('image', fileInput.current.files[0]);
   
