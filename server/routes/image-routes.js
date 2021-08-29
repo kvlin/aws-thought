@@ -32,6 +32,7 @@ router.post('/image-upload', upload, (req, res) => { // 'upload' function to def
             console.log(err);
             res.status(500).send(err)
         }
+        console.log("this is....", data)
         res.json(data)
     })
 })
