@@ -14,29 +14,28 @@
 <br>
 <!-- Below content to be changed -->
 <h1>Description</h1>
-<p>First project with MongoDB implemented and deployed on Heroku.</p>
-<p>LookingFit is a fitness tracker that helps users to monitor their fitness performances/goals. In this application, the user can create workout plans and add exercises to those plans. Charts are used to display recent fitness data for better visual interpretation of their progresses.</p>
+<p></p>
 <br/>
 <h1>Usage</h1>
-<span>Demo: <a target="_blank" href="https://lookingfit-kl.herokuapp.com">https://lookingfit-kl.herokuapp.com</a></span>
+<span>Demo: <a target="_blank" href="http://ec2-3-14-86-39.us-east-2.compute.amazonaws.com/">http://ec2-3-14-86-39.us-east-2.compute.amazonaws.com/</a></span>
 <br>
 <h1>Technologies</h1>
 <ul>
+<li>AWS EC2</li>
+<li>AWS S3</li>
+<li>AWS DynamoDB</li>
+<li>AWS Security Groups</li>
+<li>NGINX</li>
+<li>React.js</li>
 <li>HTML5</li>
 <li>CSS3</li>
 <li>JavaScript</li>
-<li>MongoDB</li>
-<li>Charts.js</li>
-<li>jQuery</li>
-<li>Bootstrap</li>
+
 </ul>
 <br>
 <h1>Screenshots</h1>
-<strong>Home page with all workout records</strong>
-<img src="./public/images/Home-page-scrn.PNG" alt="All workout records with filter">
-<br>
-<strong>Stats for the 10 most recent workouts</strong>
-<img src="./public/images/Stats-page-scrn.PNG" alt="Stats for the 10 most recent workouts">
+<strong></strong>
+<img src="" alt="">
 <br>
 <h1>Questions</h1>
 <p><span>My Github profile: </span><a href="https://github.com/klin4994" class="col-12">https://github.com/kvlin</a></p>
