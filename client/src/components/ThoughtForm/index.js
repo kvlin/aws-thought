@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { UploadOutlined } from '@ant-design/icons'
 
 const ThoughtForm = () => {
   const [formState, setFormState] = useState({
@@ -100,7 +101,7 @@ const ThoughtForm = () => {
             onClick={handleImageUpload} 
             type="submit"
           >
-            Upload
+            <UploadOutlined/> Upload
           </button>
         </label>
         <button className="btn col-12 " type="submit">
